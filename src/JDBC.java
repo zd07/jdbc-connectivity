@@ -29,7 +29,6 @@ public class JDBC {
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
 
-            // Check if user exists
             if (resultSet.next()) {
                 System.out.println("Login successful. Welcome, " + resultSet.getString("email") +  "!");
             } else {
